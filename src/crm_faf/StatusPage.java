@@ -4,7 +4,6 @@ import Data.DataCreator;
 import Data.Location;
 import DataCharts.Chart;
 import java.util.ArrayList;
-import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.stage.Stage;
@@ -19,8 +18,9 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.control.ScrollPane;
 import com.zenjava.jfxflow.actvity.AbstractActivity;
-import com.zenjava.jfxflow.navigation.NavigationManager;
-import com.zenjava.jfxflow.navigation.Place;
+import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
+
 
 
 public class StatusPage extends AbstractActivity {
