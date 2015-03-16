@@ -25,7 +25,9 @@ import javafx.scene.control.ScrollPane;
 import com.zenjava.jfxflow.actvity.AbstractActivity;
 import javafx.application.Application;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 
 /**
  *
@@ -40,7 +42,16 @@ public class StatusNotes extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         primaryStage.setTitle("Status Notes");
+        Button saveButton = new Button();
+        TextArea notesArea = new TextArea();
+        StackPane layout = new StackPane();
+        layout.getChildren().add(saveButton);
+        layout.getChildren().add(notesArea);
         
+        
+        Scene notesScene = new Scene(layout, 600, 450);
+        primaryStage.setScene(notesScene);
+        primaryStage.show();
     }
     
 }
