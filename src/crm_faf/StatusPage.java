@@ -100,9 +100,11 @@ public class StatusPage extends AbstractActivity {
 		pane.add(vbox, 0, 1);
         
         Button backButton = new Button("Go Back");
+        Button statusNotesButton = new Button("Status Notes");  //The Status Notes Button will bring up another window 
+                                                                //to show the current Status Notes 
         
         final HBox hbox = new HBox();
-        hbox.getChildren().addAll(backButton);
+        hbox.getChildren().addAll(backButton, statusNotesButton);  //Add the back button and status notes button to the hbox 
         pane.add(hbox, 0, 0);
 		
 		
