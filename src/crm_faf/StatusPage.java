@@ -18,6 +18,8 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.control.ScrollPane;
 import com.zenjava.jfxflow.actvity.AbstractActivity;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 
@@ -102,6 +104,14 @@ public class StatusPage extends AbstractActivity {
         Button backButton = new Button("Go Back");
         Button statusNotesButton = new Button("Status Notes");  //The Status Notes Button will bring up another window 
                                                                 //to show the current Status Notes 
+        
+        statusNotesButton.setOnAction(new EventHandler<ActionEvent>() {
+
+                    @Override
+                    public void handle(ActionEvent event) {
+                        new StatusNotes();
+                    }
+                });
         
         final HBox hbox = new HBox();
         hbox.getChildren().addAll(backButton, statusNotesButton);  //Add the back button and status notes button to the hbox 
